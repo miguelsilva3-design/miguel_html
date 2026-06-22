@@ -36,6 +36,24 @@ body {
     z-index: 10;
 }
 
+.modo-gear {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    font-family: 'Impact', sans-serif;
+    font-size: 20px;
+    color: #ff3333;
+    letter-spacing: 2px;
+    display: none;
+    animation: piscar 0.8s infinite alternate;
+    z-index: 10;
+}
+
+@keyframes piscar {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+}
+
 .zeus{
     position: absolute;
     width: 400px;
@@ -59,10 +77,19 @@ body {
     to{ right: 100%; }
 }
 
+.barbanegra-rapido {
+    animation-duration: 0.9s !important;
+}
+
 .luffy{
     position: absolute;
-    width: 300px; 
+    width: 300px;
     bottom: 0px;
+}
+
+.luffy-gear {
+    filter: drop-shadow(0 0 15px rgba(255, 0, 0, 0.8)) sepia(0.3) hue-rotate(-30deg);
+    transition: filter 0.5s ease;
 }
 
 @keyframes luffy_animado{
@@ -84,19 +111,8 @@ body {
     top: 0; right: 0; bottom: 0; left: 0;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.85); 
+    background-color: rgba(0, 0, 0, 0.85);
     z-index: 20;
-}
-
-.reiniciar{
-    height: 60px;
-    width: 350px;
-    border-radius: 10px;
-    border: none;
-    font-size: 20px;
-    background-color: blue;
-    color: white;
-    cursor: pointer;
 }
 
 .botaopirata {
@@ -106,8 +122,8 @@ body {
     align-items: center;
     height: 180px;
     width: 320px;
-    background-color: #e4d3a4; 
-    border: 8px double #4a2c11; 
+    background-color: #e4d3a4;
+    border: 8px double #4a2c11;
     border-radius: 4px;
     box-shadow: 0px 0px 25px rgba(255, 165, 0, 0.5);
     cursor: pointer;
@@ -128,7 +144,7 @@ body {
     font-size: 18px;
     font-weight: bold;
     color: #fff;
-    background-color: #bd1414; /* Vermelho One Piece */
+    background-color: #bd1414;
     padding: 5px 15px;
     border-radius: 4px;
     text-transform: uppercase;
@@ -144,11 +160,12 @@ body {
 }
 
 .botaopirata:hover {
-    transform: scale(1.1) rotate(-2deg); /* Dá uma leve inclinada rebelde */
+    transform: scale(1.1) rotate(-2deg);
     background-color: #f1e4c3;
-    box-shadow: 0px 0px 35px #ffcc00; /* Brilho de ouro */
+    box-shadow: 0px 0px 35px #ffcc00;
     border-color: #72441b;
 }
+
 .botaopirata:active {
     transform: scale(0.95);
 }
