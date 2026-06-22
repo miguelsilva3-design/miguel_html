@@ -77,13 +77,9 @@ body {
     to{ right: 100%; }
 }
 
-.barbanegra-rapido {
-    animation-duration: 0.9s !important;
-}
-
 .luffy{
     position: absolute;
-    width: 300px;
+    width: 250px;
     bottom: 0px;
 }
 
