@@ -17,7 +17,6 @@ const pularLuffy = () => {
 
         if (contadorPulos === 10) {
             luffy.classList.add("luffy-gear");
-            barbanegra.classList.add("barbanegra-rapido");
             modoGear.style.display = "block";
         }
 
@@ -57,14 +56,13 @@ const reiniciarJogo = () => {
     contadorPulos = 0;
     elementoContador.textContent = contadorPulos;
     luffy.classList.remove("luffy-gear");
-    barbanegra.classList.remove("barbanegra-rapido");
     modoGear.style.display = "none";
     
     barbanegra.style.animation = "barbanegra_animado 1.5s infinite linear";
     barbanegra.style.left = "";
     
     luffy.src = "./imagens/luffy.gif";
-    luffy.style.width = '300px';
+    luffy.style.width = '250px';
     luffy.style.bottom = '0px';
     luffy.style.marginLeft = '0px';
     luffy.style.animation = "";
