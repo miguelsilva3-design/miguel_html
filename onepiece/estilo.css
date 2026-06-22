@@ -1,0 +1,154 @@
+*{
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+}
+
+body {
+    background-image: url('./imagens/mar.jpg');
+}   
+
+.fundo {
+    width: 100%;
+    height: 500px;
+}
+
+.game{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgba(255, 225, 160, 0.767);
+    background: linear-gradient(#87ceeb,#e0f6ff);
+}
+
+.placar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.zeus{
+    position: absolute;
+    width: 400px;
+    animation: zeus_animado 15s infinite linear;
+}
+
+@keyframes zeus_animado{
+    from{ right: -100px; }
+    to{ right: 100%; }
+}
+
+.barbanegra{
+    position: absolute;
+    width: 160px;
+    bottom: 0px;
+    animation: barbanegra_animado 1.5s linear infinite;
+}
+
+@keyframes barbanegra_animado{
+    from{ right: 0%; }
+    to{ right: 100%; }
+}
+
+.luffy{
+    position: absolute;
+    width: 300px; 
+    bottom: 0px;
+}
+
+@keyframes luffy_animado{
+    0%{ bottom: 0; }
+    40%{ bottom: 120px; }
+    50%{ bottom: 120px; }
+    60%{ bottom: 120px; }
+    100%{ bottom: 0px; }
+}
+
+.pular{
+    animation: luffy_animado 500ms;
+}
+
+.gameover {
+    visibility: hidden;
+    display: flex;
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.85); 
+    z-index: 20;
+}
+
+.reiniciar{
+    height: 60px;
+    width: 350px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.botaopirata {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    width: 320px;
+    background-color: #e4d3a4; 
+    border: 8px double #4a2c11; 
+    border-radius: 4px;
+    box-shadow: 0px 0px 25px rgba(255, 165, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+
+.procurado {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 28px;
+    color: #4a2c11;
+    letter-spacing: 5px;
+    margin-bottom: 5px;
+}
+
+.texto-reiniciar {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #bd1414; /* Vermelho One Piece */
+    padding: 5px 15px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.recompensa {
+    font-family: 'Georgia', serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #222;
+    margin-top: 10px;
+}
+
+.botaopirata:hover {
+    transform: scale(1.1) rotate(-2deg); /* Dá uma leve inclinada rebelde */
+    background-color: #f1e4c3;
+    box-shadow: 0px 0px 35px #ffcc00; /* Brilho de ouro */
+    border-color: #72441b;
+}
+.botaopirata:active {
+    transform: scale(0.95);
+}
